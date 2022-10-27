@@ -17,6 +17,7 @@ body {
     ),
     url(./images/forest.png);
   background-position: center;
+  background-size: cover;
   font-family: 'Rancho', cursive;
   color: var(--text-color);
 }
