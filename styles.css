@@ -1,0 +1,137 @@
+:root {
+  --text-color: #fefbf6;
+  --trans-bg-color: rgba(72, 90, 34, 0.3);
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url(./images/forest.png);
+  background-position: center;
+  font-family: 'Rancho', cursive;
+  color: var(--text-color);
+}
+header,
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  gap: 4rem;
+}
+#title {
+  font-size: 3rem;
+  padding: .5rem;
+}
+#level {
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: justify;
+  margin-top: 0.5rem;
+}
+#level p {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  border-bottom: 2px solid var(--text-color);
+}
+#level p.clicked {
+  border: 2px solid var(--text-color);
+  background-color: rgba(72, 90, 34, 0.7);
+}
+#level p:hover {
+  transform: translateY(-3px);
+}
+#scoreboard {
+  font-size: 2rem;
+}
+.number {
+  margin-left: 0.5rem;
+  background-color: rgba(72, 90, 34, 0.7);
+  padding: 0.3rem;
+}
+#panel {
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+#gameboard {
+  width: 80%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 1rem;
+  position: relative;
+}
+.btns {
+  font-size: 2rem;
+  background-position: center;
+  background-color: var(--trans-bg-color);
+  border: none;
+}
+.bottom {
+  border-bottom: 3px solid var(--text-color);
+}
+.left-right {
+  border-left: 3px solid var(--text-color);
+  border-right: 3px solid var(--text-color);
+}
+.onplay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24rem;
+  height: 24rem;
+  cursor: default;
+  font-size: 2.5rem;
+  font-family: 'Modern Antiqua', cursive;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.onplay.hidden {
+  display: none;
+}
+.onplay p:hover {
+  transform: translateY(-3px);
+}
+
+button {
+  font-family: 'Modern Antiqua', cursive;
+}
+.character {
+  padding: 0.8rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  background-color: var(--text-color);
+  border: none;
+}
+.character:hover {
+  transform: translateY(-3px);
+  /* background-color: var(--trans-bg-color); */
+}
+.character.selected {
+  border: 3px solid var(--text-color);
+  background-color: rgba(72, 90, 34, 0.7)
+}
+
+/* @media (max-width:62rem){
+    .character {
+        width: 12rem;
+        height: 20rem;
+      }
+} */

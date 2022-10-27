@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googlefonts.cn/css?family=Modern+Antiqua|Rancho"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tic🐢Tac🐇Toe</title>
+  </head>
+  <body>
+    <header>
+      <div id="level">
+        <p class="clicked">Easy</p>
+        <p>Medium</p>
+        <p>Hard</p>
+        <p>Unbeatable</p>
+      </div>
+      <h1 id="title">Choose 🐢 or 🐇: 🐢 plays first</h1>
+      <div id="scoreboard">
+        <p>Round <span id="round" class="number">0</span></p>
+        <p>Score <span id="score" class="number">0</span></p>
+      </div>
+    </header>
+    <main>
+      <button id="ai" class="character">🐇</button>
+      <div id="panel">
+        <div id="gameboard">
+          <button class="btns bottom" data-index="0"></button>
+          <button class="btns left-right bottom" data-index="1">
+            <span></span>
+          </button>
+          <button class="btns bottom" data-index="2"></button>
+          <button class="btns bottom" data-index="3"></button>
+          <button class="btns left-right bottom" data-index="4"></button>
+          <button class="btns bottom" data-index="5"></button>
+          <button class="btns" data-index="6"></button>
+          <button class="btns left-right" data-index="7"></button>
+          <button class="btns" data-index="8"></button>
+          <div class="onplay"><p>Let's play !</p></div>
+        </div>
+      </div>
+      <button id="human" class="character selected">🐢</button>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
